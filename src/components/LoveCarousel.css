@@ -1,0 +1,113 @@
+.carousel-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F0 50%, #FFE4E1 100%);
+}
+
+.carousel-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1000;
+}
+
+.carousel-subtitle {
+  color: #D4AF37;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.carousel-title {
+  font-family: 'Cinzel', serif;
+  color: #FF69B4;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.carousel-divider {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #FF69B4, #FFB6C1);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+}
+
+.carousel-item-custom {
+  --width: clamp(200px, 30vw, 350px);
+  --height: clamp(280px, 40vw, 450px);
+  --x: calc(var(--active) * 800%);
+  --y: calc(var(--active) * 200%);
+  --rot: calc(var(--active) * 120deg);
+  --opacity: calc(var(--zIndex) / 10 * 3 - 2);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--width);
+  height: var(--height);
+  margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+  border-radius: 20px;
+  transform-origin: 0% 100%;
+  transform: translate(var(--x), var(--y)) rotate(var(--rot));
+  transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
+  box-shadow: 0 10px 50px rgba(255, 105, 180, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid #FF69B4;
+}
+
+.carousel-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(135deg, #FFE4E1, #FFF0F5);
+}
+
+.carousel-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.num {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #FF69B4;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
+  z-index: 10;
+}
+
+.carousel-instruction {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 1rem;
+  font-style: italic;
+}

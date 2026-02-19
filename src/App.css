@@ -1,0 +1,81 @@
+/* Global App Styles with Bootstrap */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Hero Section Specific */
+.hero-background {
+  will-change: transform;
+  transition: transform 20s linear;
+}
+
+.curtain-left,
+.curtain-right {
+  will-change: transform;
+}
+
+.frame-image {
+  will-change: transform, opacity;
+}
+
+/* Text Effects */
+.hero-title,
+.hero-names {
+  will-change: transform, opacity;
+}
+
+/* Gallery Effects */
+.gallery-image {
+  will-change: transform, filter;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.gallery-image img {
+  will-change: filter;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Scroll Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}

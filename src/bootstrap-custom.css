@@ -1,0 +1,178 @@
+/* Premium Wedding Theme - White, Pink & Cream */
+
+:root {
+  /* Premium Color Palette - White, Pink, Cream */
+  --wedding-pink: #FF69B4;
+  --wedding-light-pink: #FFB6C1;
+  --wedding-cream: #FFF8F0;
+  --wedding-white: #FFFFFF;
+  --wedding-rose: #FFC0CB;
+  --wedding-peach: #FFE4E1;
+  --wedding-gold: #D4AF37;
+  --wedding-text-dark: #333333;
+  --wedding-text-light: #666666;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF8F0 50%, #FFE4E1 100%);
+  color: var(--wedding-text-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  color: var(--wedding-pink);
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 182, 193, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(255, 105, 180, 0.15);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(255, 105, 180, 0.25);
+  border-color: var(--wedding-pink);
+}
+
+/* Buttons */
+.btn-wedding-primary {
+  background: linear-gradient(135deg, #FF69B4 0%, #FFB6C1 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-wedding-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.5);
+  color: white;
+}
+
+.btn-wedding-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
+  color: #333;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-wedding-gold:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+  color: #000;
+}
+
+/* Section Styling */
+.wedding-section {
+  padding: 100px 0;
+  background: var(--wedding-white);
+}
+
+.section-title {
+  font-size: 3.5rem;
+  color: var(--wedding-pink);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--wedding-gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.section-divider {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #FF69B4, #FFB6C1);
+  margin: 30px auto;
+  border-radius: 10px;
+}
+
+/* Form Styling */
+.form-control-wedding {
+  background: white;
+  border: 2px solid rgba(255, 182, 193, 0.3);
+  border-radius: 15px;
+  padding: 15px 20px;
+  color: var(--wedding-text-dark);
+  transition: all 0.3s ease;
+}
+
+.form-control-wedding:focus {
+  border-color: var(--wedding-pink);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
+  background: white;
+  outline: none;
+}
+
+.form-label-wedding {
+  color: var(--wedding-pink);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Glow Effect */
+.glow-text {
+  text-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .wedding-section {
+    padding: 60px 0;
+  }
+}
